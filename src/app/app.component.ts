@@ -7,12 +7,14 @@ import { noComponentFactoryError } from '@angular/core/src/linker/component_fact
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  peso = 70;
-  altura = 1.70;
+  peso:number
+  altura:number
   icon = 'favicon.ico';
-  imc = this.peso / (Math.pow(this.altura, 2));
+  
 
   exibir(): void {
-    alert(`IMC: ${this.imc.toFixed(1)}`);
+    let imc = this.peso / (Math.pow(this.altura, 2));
+    alert(`IMC: ${imc.toFixed(1)}`);
   }
+
 }
